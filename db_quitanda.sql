@@ -71,11 +71,20 @@ SELECT * FROM tab_produtos;
 
 
 
--- altera tabela TABELA muda 
+-- altera tabela TABELA muda ATRIBUTO ATRIBUTOMUDADO FORMATO();
 ALTER TABLE tab_produtos CHANGE preco precoBR decimal(8,2);
 
 -- A concatenar para REAIS brasileiros
-SELECT nome, CONCAT('R$', FORMAT(preco,2,'pt-BR'));
+-- seleciono o ATRIBUTO NOME, --ATRIBUTO-- concateno para( ' REAIS ', formato(ATRIBUTO A SER CONCATENADO E FORMATADO,CASAS ATRÁS DA VÍRGULA,'NOMEFORMATO')) como NOME A APARECER NO ATRIBUTO FORMATADO de TABELA;
+SELECT nome, CONCAT('R$', FORMAT(preco,2,'pt-BR')) AS preço FROM tab_produtos;
+
+-- seleciono ATRIBUTO de TABELA --e o mostro-- onde ATRIBUTO é 
+SELECT preco from tab_produtos WHERE preco > 5;
+
+-- seleciono ATRIBUTO DE TABELA --e o mostro-- onde ATRIBUTO é
+SELECT * FROM tab_produtos WHERE nome="tomate";
+
+
 
 
 
