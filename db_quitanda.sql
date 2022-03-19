@@ -78,15 +78,16 @@ ALTER TABLE tab_produtos CHANGE preco precoBR decimal(8,2);
 -- seleciono o ATRIBUTO NOME, --ATRIBUTO-- concateno para( ' REAIS ', formato(ATRIBUTO A SER CONCATENADO E FORMATADO,CASAS ATRÁS DA VÍRGULA,'NOMEFORMATO')) como NOME A APARECER NO ATRIBUTO FORMATADO de TABELA;
 SELECT nome, CONCAT('R$', FORMAT(preco,2,'pt-BR')) AS preço FROM tab_produtos;
 
--- seleciono ATRIBUTO de TABELA --e o mostro-- onde ATRIBUTO é 
+-- seleciono ATRIBUTO de TABELA --e o mostro-- onde ATRIBUTO é maior que
 SELECT preco from tab_produtos WHERE preco > 5;
 
--- seleciono ATRIBUTO DE TABELA --e o mostro-- onde ATRIBUTO é
+-- seleciono ATRIBUTO de TABELA --e o mostro-- onde ATRIBUTO é igual
 SELECT * FROM tab_produtos WHERE nome="tomate";
 
 
 
 
+INSERT INTO tab_produtos VALUES("azeite", 9, "2022-09-05",22.0);
 
 
 
