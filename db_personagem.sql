@@ -43,7 +43,7 @@ SELECT * FROM Tab_personagem WHERE poder_ataque_personagem>2000;
 
 SELECT * FROM Tab_personagem WHERE poder_defesa_personagem BETWEEN 1000 AND 2000;
 
-SELECT *  FROM Tab_personagem WHERE nome_personagem LIKE "C%";
+SELECT *  FROM Tab_personagem WHERE nome_personagem LIKE "%c%";
 
 SELECT id_personagem,nome_personagem,tamanho_personagem,cor_personagem,Tab_classe.nivel_classe,Tab_classe.descri_classe
 FROM Tab_personagem INNER JOIN Tab_classe ON Tab_personagem.id_classe=Tab_classe.id_classe ORDER BY id_personagem;
